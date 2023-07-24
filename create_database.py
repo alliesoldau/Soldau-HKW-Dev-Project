@@ -1,9 +1,8 @@
 import sqlite3
-import datetime
 import json
 
 # create and connect to SQL database
-connection = sqlite3.connect('sales_data.sqlite')
+connection = sqlite3.connect('book_data.sqlite')
 cursor = connection.cursor()
 
 # start fresh each execution

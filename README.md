@@ -1,3 +1,29 @@
+npm install axios
+npm install express
+npm install sqlite3
+install python
+
+run server.js to start up the server
+
+# Here are the project requirements we talked about:
+
+A frontend table built with React that displays data from a database (example data from any subject is fine).
+This table should contain:
+
+- 8 columns and at least 20 rows of data
+- 1 column should contain dates
+- 1 column should contain numbers
+- 1 column should contain an alphanumeric string
+- 1 column should contain text and a hyperlink
+
+UI requirements:
+
+- A search input that filters the data
+- Sortable column data with a UI indicator
+- A UI feature that allows the user to hide/show the table columns
+
+Feel free to include any other UI elements or interactions with this table that you would like, but the only items required for presentation are those above.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
