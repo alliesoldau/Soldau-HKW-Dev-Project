@@ -218,16 +218,5 @@
         "rating": 5,
         "page_count": 528,
         "genres": ["Sagas", "Family Life"]
-      },
-    // {
-    //     "author": "",
-    //     "title": "",
-    //     "date_completed": "",
-    //     "publisher": "",
-    //     "publisher_address": "",
-    //     "url": "",
-    //     "rating": ,
-    //     "page_count": ,
-    //     "genres": []
-    // },
+      }
 ]
