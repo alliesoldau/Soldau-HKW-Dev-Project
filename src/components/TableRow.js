@@ -1,3 +1,5 @@
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 function TableRow({ book, hideShow }) {
   // turn the genres string into an array so we can map through it and display it programatically
   const genres = book.genres.split(", ");
@@ -76,7 +78,7 @@ function TableRow({ book, hideShow }) {
       </td>
       <td key="url" id="url" className={hideShow.url}>
         <a href={book.url} target="_blank" rel="noopener noreferrer">
-          LINK
+          <FaExternalLinkAlt className="link" />
         </a>
       </td>
     </tr>

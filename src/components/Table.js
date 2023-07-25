@@ -1,22 +1,11 @@
 import React, { useState, useEffect } from "react";
 import TableRow from "./TableRow";
-import { CSSTransition } from "react-transition-group";
+import { FaRegEyeSlash, FaSort } from "react-icons/fa";
 
 function Table({ books }) {
   useEffect(() => {
     setTableBooks([...books]);
-  }, [books]);
-  // create a copy of books so that I can manipulate the order when I want to sort it by a specific column
-  const [tableBooks, setTableBooks] = useState([...books]);
-  const [lastHeader, setLastHeader] = useState();
-  const [ascent, setAscent] = useState(false);
-  const [headers, setHeaders] = useState([]);
-  const [headersFormatted, setHeadersFormatted] = useState([]);
-  const [hideShow, setHideShow] = useState([]);
-
-  // every time tableBooks updates we can get our headers
-  useEffect(() => {
-    let booksHeaders = tableBooks.length > 0 ? Object.keys(tableBooks[0]) : [];
+    let booksHeaders = books.length > 0 ? Object.keys(books[0]) : [];
     booksHeaders.shift();
     // get our raw headers
     setHeaders(booksHeaders);
@@ -27,7 +16,14 @@ function Table({ books }) {
     formatted.pop();
     formatted.push("Purchase Link");
     setHeadersFormatted(formatted);
-  }, [tableBooks]);
+  }, [books]);
+  // create a copy of books so that I can manipulate the order when I want to sort it by a specific column
+  const [tableBooks, setTableBooks] = useState([...books]);
+  const [lastHeader, setLastHeader] = useState();
+  const [ascent, setAscent] = useState(false);
+  const [headers, setHeaders] = useState([]);
+  const [headersFormatted, setHeadersFormatted] = useState([]);
+  const [hideShow, setHideShow] = useState([]);
 
   // create an object which determines if the column is hidden or shown
   useEffect(() => {
@@ -50,7 +46,6 @@ function Table({ books }) {
 
   // handles sorting
   function handleSort(index) {
-    console.log("sort");
     let sorted = [...tableBooks];
     let selectedHeader = headers[index];
     if (
@@ -96,7 +91,6 @@ function Table({ books }) {
   }
 
   function handleHideShow(selectedHeader) {
-    console.log("x");
     let previousClassName = hideShow[selectedHeader];
     let currentClassName;
     if (previousClassName === "show") {
@@ -109,7 +103,6 @@ function Table({ books }) {
       [selectedHeader]: currentClassName,
     };
     setHideShow(updatedHideShow);
-    console.log(updatedHideShow);
   }
 
   return (
@@ -125,21 +118,30 @@ function Table({ books }) {
                   value={headers[index]}
                   className={hideShow[headers[index]]}
                 >
-                  <div>
-                    <p
-                      onClick={() => {
-                        handleSort(index);
-                      }}
-                    >
-                      {header}{" "}
-                    </p>
-                    <p
-                      onClick={() => {
-                        handleHideShow(headers[index]);
-                      }}
-                    >
-                      X
-                    </p>
+                  <div className="columnHeader">
+                    <div className="iconContainer">
+                      <FaRegEyeSlash
+                        className="eyeball"
+                        onClick={() => {
+                          handleHideShow(headers[index]);
+                        }}
+                      />
+                    </div>
+                    <div className="headerContainer">
+                      <p>{header}</p>
+                    </div>
+                    {headers[index] === "publisher_address" ||
+                    headers[index] === "genres" ||
+                    headers[index] === "url" ? null : (
+                      <div className="iconContainer">
+                        <FaSort
+                          className="arrows"
+                          onClick={() => {
+                            handleSort(index);
+                          }}
+                        />
+                      </div>
+                    )}
                   </div>
                 </th>
               ))}

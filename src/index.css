@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root {
-  --table1: #234E70;
-  --table2: #3d617c;
+  --table1: #15845f;
+  --table2: #234E70;
   --black: #100f24;
   --grey: #242235;
   --white: #f5feff;
@@ -12,24 +12,20 @@
 }
 
 .hide {
-  transition: opacity 200ms, display 200ms;
-  width: 0px;
-  opacity: 0;
   display: none;
 }
 
 .show {
   display: table-cell;
-  opacity: 1;
-  width: auto;
 }
 
 
 body {
-  margin: 0;
+  margin: 2em;
   font-family: "Open Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--grey);
 }
 
 .table {
@@ -39,19 +35,55 @@ body {
 }
 
 table {
-  width: 90%;
+  width: auto;
   background: linear-gradient(45deg, var(--table1), var(--table2));
-  border: 1px solid rgba(0,0,0, 0.25);
   border-spacing: 0px;
   color: var(--white);
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  table-layout: fixed;
 }
 
 th {
-  border-bottom: 2px solid rgba(0,0,0, 0.25);
-  font-size: 1.2em;
   padding: 0.5em;
   background-color: rgba(36, 34, 53, 0.9);
+}
+
+td {
+  width: auto;
+}
+
+.columnHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.headerContainer {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+th:hover .arrows,
+th:hover .eyeball {
+  color: var(--white);
+  margin: auto;
+  opacity: 1;
+  transition:opacity 1s ease;
+
+}
+
+.arrows, .eyeball {
+  opacity: 0;
+}
+
+.link:hover {
+  filter: brightness(2);
+  color: var(--table1);
 }
 
 tr {
@@ -81,21 +113,15 @@ td {
   }
 }
 
-#title, #author, #page-count, #date, #url {
-  width: 10em;
-}
 #rating, #page-count, #date, #url {
   text-align: center;
 }
 
-#address {
-  width: 15em;
-}
 
 .genres-container {
   display: flex;
   flex-direction: row;
-  width: 15em;
+  /* width: 15em; */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -110,4 +136,12 @@ td {
   width: max-content;
   font-size: 0.9em;
   background-color: rgba(128, 128, 128, 0.249);
+}
+
+a {
+  color: var(--white);
+}
+
+a:hover {
+  font-weight: bold;
 }

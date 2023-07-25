@@ -1,7 +1,7 @@
 npm install express
 npm install sqlite3
 install python
-npm install react-transition-group
+npm install react-icons
 
 run server.js to start up the server
 npm start to get the frontend running
