@@ -8,7 +8,7 @@ function Table({ books }) {
   // create a copy of books so that I can manipulate the order when I want to sort it by a specific column
   const [tableBooks, setTableBooks] = useState([...books]);
   const [lastHeader, setLastHeader] = useState();
-  const [ascent, setAscent] = useState(true);
+  const [ascent, setAscent] = useState(false);
 
   // extract the column headers from the first object in the data array
   let headers = tableBooks.length > 0 ? Object.keys(tableBooks[0]) : [];
@@ -36,7 +36,13 @@ function Table({ books }) {
     let sorted = [...tableBooks];
     let selectedHeader = headers[index];
     console.log("selectedHeader", selectedHeader);
-    console.log("lastheader", lastHeader);
+    if (
+      selectedHeader === "publisher_address" ||
+      selectedHeader === "url" ||
+      selectedHeader === "genres"
+    ) {
+      return;
+    }
     if (selectedHeader === lastHeader) {
       let previousOrder = ascent;
       setAscent(!previousOrder);

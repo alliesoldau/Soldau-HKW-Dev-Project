@@ -1,26 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root {
-  --orange1: #c36f09;
-  --orange2: #a75e06;
-  --blue1: #04a5ba;
-  --blue2: #02899a;
-  --blue3: #027382;
-  --blue4: #025964;
-  --red1: #d81159;
-  --red2: #d3356f;
-  --red3: #d4467a;
-  --purple1: #8a4ea3;
-  --purple2: #843ca3;
-  --purple3: #822ca7;
-  --purple4: #7f1aab;
-  --mint1: #239a96;
-  --mint2: #177673;
-  --green1: #13957d;
-  --green2: #0e6e5d;
-  --green3: #065143;
-  --rose1: #b83b6f;
-  --rose2: #8f2d56;
+  --table1: #234E70;
+  --table2: #3d617c;
   --black: #100f24;
   --grey: #242235;
   --white: #f5feff;
@@ -44,16 +26,18 @@ body {
 
 table {
   width: 90%;
-  background-color: var(--black);
+  background: linear-gradient(45deg, var(--table1), var(--table2));
   border: 1px solid rgba(0,0,0, 0.25);
   border-spacing: 0px;
   color: var(--white);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 th {
   border-bottom: 2px solid rgba(0,0,0, 0.25);
   font-size: 1.2em;
   padding: 0.5em;
+  background-color: rgba(36, 34, 53, 0.9);
 }
 
 tr {
@@ -61,7 +45,7 @@ tr {
 }
 
 tr:nth-child(even) {
-  background-color: var(--grey);
+  background-color: rgba(36, 34, 53, 0.5);
 }
 
 td {
@@ -110,75 +94,6 @@ td {
   padding: 0.25em;
   margin: 0.2em;
   width: max-content;
-  font-size: 0.8em;
-}
-
-.Fantasy {
-  background-color: var(--orange1);
-}
-.Sci {
-  background-color: var(--orange2);
-}
-
-
-.Native {
-  background-color: var(--blue1);
-}
-.African {
-  background-color: var(--blue2);
-}
-.Immigrants {
-  background-color: var(--blue3);
-}
-.Asian {
-  background-color: var(--blue4);
-}
-
-
-.Memoir {
-  background-color: var(--mint1);
-}
-.Essays {
-  background-color: var(--mint2);
-}
-
-
-.Political {
-  background-color: var(--red1);
-}
-.Colonialism {
-  background-color: var(--red2);
-}
-.Apocalyptic {
-  background-color: var(--red3);
-}
-
-.LGBTQ {
-  background-color: var(--rose1);
-}
-.Women {
-  background-color: var(--rose2);
-}
-
-.Historical {
-  background-color: var(--purple1);
-}
-.Classics {
-  background-color: var(--purple2);
-}
-.Romance {
-  background-color: var(--purple3);
-}
-.Humorous {
-  background-color: var(--purple4);
-}
-
-.Psychological {
-  background-color: var(--green1);
-}
-.Crime {
-  background-color: var(--green2);
-}
-.Horror {
-  background-color: var(--green3);
+  font-size: 0.9em;
+  background-color: rgba(128, 128, 128, 0.249);
 }
