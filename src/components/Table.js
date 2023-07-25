@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TableRow from "./TableRow";
+import { CSSTransition } from "react-transition-group";
 
 function Table({ books }) {
   useEffect(() => {
@@ -31,7 +32,7 @@ function Table({ books }) {
   // create an object which determines if the column is hidden or shown
   useEffect(() => {
     let hideShowObject = headers.reduce((obj, str) => {
-      obj[str] = false;
+      obj[str] = "show";
       return obj;
     }, {});
     setHideShow(hideShowObject);
@@ -96,9 +97,16 @@ function Table({ books }) {
 
   function handleHideShow(selectedHeader) {
     console.log("x");
+    let previousClassName = hideShow[selectedHeader];
+    let currentClassName;
+    if (previousClassName === "show") {
+      currentClassName = "hide";
+    } else {
+      currentClassName = "show";
+    }
     let updatedHideShow = {
       ...hideShow,
-      [selectedHeader]: !hideShow[selectedHeader],
+      [selectedHeader]: currentClassName,
     };
     setHideShow(updatedHideShow);
     console.log(updatedHideShow);
@@ -115,7 +123,7 @@ function Table({ books }) {
                   id={headers[index]}
                   key={headers[index]}
                   value={headers[index]}
-                  hidden={hideShow[headers[index]]}
+                  className={hideShow[headers[index]]}
                 >
                   <div>
                     <p

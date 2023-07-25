@@ -11,9 +11,19 @@
   --star-background: #fc0;
 }
 
-td.show, th.show, tr.show {
-  display: true;
+.hide {
+  transition: opacity 200ms, display 200ms;
+  width: 0px;
+  opacity: 0;
+  display: none;
 }
+
+.show {
+  display: table-cell;
+  opacity: 1;
+  width: auto;
+}
+
 
 body {
   margin: 0;

@@ -36,23 +36,23 @@ function TableRow({ book, hideShow }) {
 
   return (
     <tr key={book.id}>
-      <td key="title" id="title" hidden={hideShow.title}>
+      <td key="title" id="title" className={hideShow.title}>
         {book.title}
       </td>
-      <td key="author" id="author" hidden={hideShow.author}>
+      <td key="author" id="author" className={hideShow.author}>
         {book.author}
       </td>
-      <td key="rating" id="rating" hidden={hideShow.rating}>
+      <td key="rating" id="rating" className={hideShow.rating}>
         <div
           className="stars"
           style={{ "--rating": book.rating }}
           aria-label="Rating of this product is 2.3 out of 5."
         ></div>
       </td>
-      <td key="page-count" id="page-count" hidden={hideShow.page_count}>
+      <td key="page-count" id="page-count" className={hideShow.page_count}>
         {book.page_count}
       </td>
-      <td key="genres" id="genres" hidden={hideShow.genres}>
+      <td key="genres" id="genres" className={hideShow.genres}>
         <div className="genres-container">
           {genres.map((word, index) => (
             <div key={index} id="genre" className={word}>
@@ -61,20 +61,20 @@ function TableRow({ book, hideShow }) {
           ))}
         </div>
       </td>
-      <td key="date-completed" id="date" hidden={hideShow.date_completed}>
+      <td key="date-completed" id="date" className={hideShow.date_completed}>
         {formattedDate}
       </td>
-      <td key="publisher" id="publisher" hidden={hideShow.publisher}>
+      <td key="publisher" id="publisher" className={hideShow.publisher}>
         {book.publisher}
       </td>
       <td
         key="publisher-address"
         id="address"
-        hidden={hideShow.publisher_address}
+        className={hideShow.publisher_address}
       >
         {book.publisher_address}
       </td>
-      <td key="url" id="url" hidden={hideShow.url}>
+      <td key="url" id="url" className={hideShow.url}>
         <a href={book.url} target="_blank" rel="noopener noreferrer">
           LINK
         </a>
