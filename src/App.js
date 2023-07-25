@@ -18,10 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar
-        filteredBooks={filteredBooks}
-        setFilteredBooks={setFilteredBooks}
-      />
+      <SearchBar books={books} setFilteredBooks={setFilteredBooks} />
       <Table filteredBooks={filteredBooks} />
     </div>
   );

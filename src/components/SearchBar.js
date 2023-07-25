@@ -1,24 +1,31 @@
 import { useState, useEffect } from "react";
 
-function SearchBar({ filteredBooks, setFilteredBooks }) {
-  // Step 1: Set Up State Variables
+function SearchBar({ filteredBooks, books, setFilteredBooks }) {
+  // set Up State Variables
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Step 3: Handle Search Input
+  // handle Search Input
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  // Step 4: Filter Data
+  // filter Data
   useEffect(() => {
-    if (filteredBooks) {
-      const filteredResult = filteredBooks.filter(
-        (item) => item.title?.toLowerCase().includes(searchQuery.toLowerCase()) // Use optional chaining
+    if (books) {
+      const filteredResult = books.filter((item) =>
+        Object.entries(item).some(([key, value]) => {
+          // exclude the url and publisher_address --> searching that isn't helpful to us
+          if (key === "url" || key === "publisher_address") return false;
+          return value
+            ?.toString()
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase());
+        })
       );
       setFilteredBooks(filteredResult);
       console.log(filteredResult);
     }
-  }, [searchQuery]);
+  }, [searchQuery, books, setFilteredBooks]);
 
   return (
     <div>
