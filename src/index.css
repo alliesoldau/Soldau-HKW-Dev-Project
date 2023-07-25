@@ -11,6 +11,10 @@
   --star-background: #fc0;
 }
 
+td.show, th.show, tr.show {
+  display: true;
+}
+
 body {
   margin: 0;
   font-family: "Open Sans";
@@ -67,14 +71,14 @@ td {
   }
 }
 
-.title, .author, .page-count, .date, .url {
+#title, #author, #page-count, #date, #url {
   width: 10em;
 }
-.rating, .page-count, .date, .url {
+#rating, #page-count, #date, #url {
   text-align: center;
 }
 
-.address {
+#address {
   width: 15em;
 }
 

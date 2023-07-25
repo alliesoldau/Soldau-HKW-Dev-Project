@@ -9,22 +9,38 @@ function Table({ books }) {
   const [tableBooks, setTableBooks] = useState([...books]);
   const [lastHeader, setLastHeader] = useState();
   const [ascent, setAscent] = useState(false);
+  const [headers, setHeaders] = useState([]);
+  const [headersFormatted, setHeadersFormatted] = useState([]);
+  const [hideShow, setHideShow] = useState([]);
 
-  // extract the column headers from the first object in the data array
-  let headers = tableBooks.length > 0 ? Object.keys(tableBooks[0]) : [];
-  // remove the id column from the headers array because we don't want to display that
-  headers.shift();
+  // every time tableBooks updates we can get our headers
+  useEffect(() => {
+    let booksHeaders = tableBooks.length > 0 ? Object.keys(tableBooks[0]) : [];
+    booksHeaders.shift();
+    // get our raw headers
+    setHeaders(booksHeaders);
+    // format the headers to look prettier
+    let formatted = booksHeaders.map((str) =>
+      capitalizeAllWords(str.replace(/_/g, " "))
+    );
+    formatted.pop();
+    formatted.push("Purchase Link");
+    setHeadersFormatted(formatted);
+  }, [tableBooks]);
+
+  // create an object which determines if the column is hidden or shown
+  useEffect(() => {
+    let hideShowObject = headers.reduce((obj, str) => {
+      obj[str] = false;
+      return obj;
+    }, {});
+    setHideShow(hideShowObject);
+  }, [headers]);
+
   // function to capitalize all words in the string
   function capitalizeAllWords(str) {
     return str.replace(/\b\w/g, (match) => match.toUpperCase());
   }
-  // format the headers to look prettier
-  const headersFormatted = headers.map((str) =>
-    capitalizeAllWords(str.replace(/_/g, " "))
-  );
-  // replace the column title url with purchase link -- we'll use the url for the hyperlink
-  headersFormatted.pop();
-  headersFormatted.push("Purchase Link");
 
   // map through the table books and fill out each row with the data
   const tableRows = tableBooks.map((book) => (
@@ -33,9 +49,9 @@ function Table({ books }) {
 
   // handles sorting
   function handleSort(index) {
+    console.log("sort");
     let sorted = [...tableBooks];
     let selectedHeader = headers[index];
-    console.log("selectedHeader", selectedHeader);
     if (
       selectedHeader === "publisher_address" ||
       selectedHeader === "url" ||
@@ -78,26 +94,52 @@ function Table({ books }) {
     setLastHeader(selectedHeader);
   }
 
+  function handleHideShow(selectedHeader) {
+    console.log("x");
+    let updatedHideShow = {
+      ...hideShow,
+      [selectedHeader]: !hideShow[selectedHeader],
+    };
+    setHideShow(updatedHideShow);
+    console.log(updatedHideShow);
+  }
+
   return (
     <div className="table">
-      <table>
-        <thead>
-          <tr>
-            {headersFormatted.map((header, index) => (
-              <th
-                key={headers[index]}
-                value={headers[index]}
-                onClick={() => {
-                  handleSort(index);
-                }}
-              >
-                {header}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>{tableRows}</tbody>
-      </table>
+      {headers.length > 0 ? (
+        <table>
+          <thead>
+            <tr>
+              {headersFormatted.map((header, index) => (
+                <th
+                  id={headers[index]}
+                  key={headers[index]}
+                  value={headers[index]}
+                  hidden={hideShow[headers[index]]}
+                >
+                  <div>
+                    <p
+                      onClick={() => {
+                        handleSort(index);
+                      }}
+                    >
+                      {header}{" "}
+                    </p>
+                    <p
+                      onClick={() => {
+                        handleHideShow(headers[index]);
+                      }}
+                    >
+                      X
+                    </p>
+                  </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>{tableRows}</tbody>
+        </table>
+      ) : null}
     </div>
   );
 }

@@ -32,25 +32,27 @@ function TableRow({ book }) {
 
   const formattedDate = formatDate(book.date_completed.toString());
 
+  // TO DO: hide/show columns based on click
+
   return (
     <tr key={book.id}>
-      <td key="title" className="title">
+      <td key="title" id="title">
         {book.title}
       </td>
-      <td key="author" className="author">
+      <td key="author" id="author">
         {book.author}
       </td>
-      <td key="rating" className="rating">
+      <td key="rating" id="rating">
         <div
           className="stars"
           style={{ "--rating": book.rating }}
           aria-label="Rating of this product is 2.3 out of 5."
         ></div>
       </td>
-      <td key="page-count" className="page-count">
+      <td key="page-count" id="page-count">
         {book.page_count}
       </td>
-      <td key="genres" className="genres">
+      <td key="genres" id="genres">
         <div className="genres-container">
           {genres.map((word, index) => (
             <div key={index} id="genre" className={word}>
@@ -59,16 +61,16 @@ function TableRow({ book }) {
           ))}
         </div>
       </td>
-      <td key="date-completed" className="date">
+      <td key="date-completed" id="date">
         {formattedDate}
       </td>
-      <td key="publisher" className="publisher">
+      <td key="publisher" id="publisher">
         {book.publisher}
       </td>
-      <td key="publisher-address" className="address">
+      <td key="publisher-address" id="address">
         {book.publisher_address}
       </td>
-      <td key="url" className="url">
+      <td key="url" id="url">
         <a href={book.url} target="_blank" rel="noopener noreferrer">
           LINK
         </a>
