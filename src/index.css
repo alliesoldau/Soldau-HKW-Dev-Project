@@ -31,7 +31,6 @@ body {
 .table {
   display: flex;
   justify-content: center;
-  padding-top: 5em;
 }
 
 table {
@@ -68,17 +67,22 @@ td {
   justify-content: center;
 }
 
+.arrows, .eyeball {
+  opacity: 0;
+}
+
 th:hover .arrows,
 th:hover .eyeball {
   color: var(--white);
   margin: auto;
   opacity: 1;
   transition:opacity 1s ease;
-
 }
 
-.arrows, .eyeball {
-  opacity: 0;
+th:hover .arrows:hover,
+th:hover .eyeball:hover {
+  color: var(--table2);
+  filter: brightness(3);
 }
 
 .link:hover {
@@ -144,4 +148,8 @@ a {
 
 a:hover {
   font-weight: bold;
+}
+
+.hidden-columns-container {
+  color: var(--white);
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TableRow from "./TableRow";
+import HiddenColumns from "./HiddenColumns";
 import { FaRegEyeSlash, FaSort } from "react-icons/fa";
 
 function Table({ books }) {
@@ -106,51 +107,59 @@ function Table({ books }) {
   }
 
   return (
-    <div className="table">
-      {headers.length > 0 ? (
-        <table>
-          <thead>
-            <tr>
-              {headersFormatted.map((header, index) => (
-                <th
-                  id={headers[index]}
-                  key={headers[index]}
-                  value={headers[index]}
-                  className={hideShow[headers[index]]}
-                >
-                  <div className="columnHeader">
-                    <div className="iconContainer">
-                      <FaRegEyeSlash
-                        className="eyeball"
-                        onClick={() => {
-                          handleHideShow(headers[index]);
-                        }}
-                      />
-                    </div>
-                    <div className="headerContainer">
-                      <p>{header}</p>
-                    </div>
-                    {headers[index] === "publisher_address" ||
-                    headers[index] === "genres" ||
-                    headers[index] === "url" ? null : (
+    <>
+      <HiddenColumns
+        hideShow={hideShow}
+        setHideShow={setHideShow}
+        headers={headers}
+        headersFormatted={headersFormatted}
+      />
+      <div className="table">
+        {headers.length > 0 ? (
+          <table>
+            <thead>
+              <tr>
+                {headersFormatted.map((header, index) => (
+                  <th
+                    id={headers[index]}
+                    key={headers[index]}
+                    value={headers[index]}
+                    className={hideShow[headers[index]]}
+                  >
+                    <div className="columnHeader">
                       <div className="iconContainer">
-                        <FaSort
-                          className="arrows"
+                        <FaRegEyeSlash
+                          className="eyeball"
                           onClick={() => {
-                            handleSort(index);
+                            handleHideShow(headers[index]);
                           }}
                         />
                       </div>
-                    )}
-                  </div>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>{tableRows}</tbody>
-        </table>
-      ) : null}
-    </div>
+                      <div className="headerContainer">
+                        <p>{header}</p>
+                      </div>
+                      {headers[index] === "publisher_address" ||
+                      headers[index] === "genres" ||
+                      headers[index] === "url" ? null : (
+                        <div className="iconContainer">
+                          <FaSort
+                            className="arrows"
+                            onClick={() => {
+                              handleSort(index);
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>{tableRows}</tbody>
+          </table>
+        ) : null}
+      </div>
+    </>
   );
 }
 
