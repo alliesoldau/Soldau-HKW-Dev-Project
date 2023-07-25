@@ -1,7 +1,9 @@
+npm install should install all dependancies
 npm install express
 npm install sqlite3
 install python
 npm install react-icons
+npm install react-select
 
 run server.js to start up the server
 npm start to get the frontend running

@@ -150,6 +150,6 @@ a:hover {
   font-weight: bold;
 }
 
-.hidden-columns-container {
-  color: var(--white);
+.hidden-columns-dd {
+  color: yellow;
 }
