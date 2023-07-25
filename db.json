@@ -30,7 +30,7 @@
         "url": "https://bookshop.org/p/books/heart-berries-a-memoir-terese-marie-mailhot/17272145?ean=9781640091603",
         "rating": 4,
         "page_count": 143,
-        "genres": ["Personal Memoirs", "Women", "Ethnic & Regional", "Native American & Aboriginal", "Ethnic Studies", "Native American Studies", "Colonialsm & Post-Colonialism"]
+        "genres": ["Personal Memoirs", "Women", "Ethnic & Regional", "Ethnic Studies", "Native American", "Colonialism & Post-Colonialism"]
       },
       {
         "author": "Robert Jones Jr",
@@ -96,7 +96,7 @@
         "url": "https://bookshop.org/p/books/butter-honey-pig-bread-francesca-ekwuyasi/14144152?ean=9781551528236",
         "rating": 5,
         "page_count": 368,
-        "genres": ["African American", "Women", "LGBTQ", "Lesbian", "Sagas"]
+        "genres": ["African American", "Women", "LGBTQ", "Sagas"]
       },
       {
         "author": "Sabrina Imbler",
@@ -129,7 +129,7 @@
         "url": "https://bookshop.org/p/books/you-exist-too-much-zaina-arafat/13006757?ean=9781646220595",
         "rating": 4,
         "page_count": 272,
-        "genres": ["Coming of Age", "LGBTQ", "Bisexual", "Gay", "Women"]
+        "genres": ["Coming of Age", "LGBTQ", "Women"]
       },
       {
         "author": "Min Jin Lee",
@@ -162,7 +162,7 @@
         "url": "https://bookshop.org/p/books/legends-lattes-a-novel-of-high-fantasy-and-low-stakes-travis-baldree/18632175?ean=9781250886088",
         "rating": 5,
         "page_count": 304,
-        "genres": ["Fantasy", "Humorous", "Romantic"]
+        "genres": ["Fantasy", "Humorous", "Romance"]
       },
       {
         "author": "Fyodor Dostoevsky",
@@ -173,7 +173,7 @@
         "url": "https://bookshop.org/p/books/crime-and-punishment-fyodor-dostoevsky/18229188?ean=9780679734505",
         "rating": 2,
         "page_count": 624,
-        "genres": ["Classics", "Crime", "Russia", "Psychological", "Historical", "Romance"]
+        "genres": ["Classics", "Crime", "Psychological", "Historical", "Romance"]
       },
       {
         "author": "P. Djeli Clark",

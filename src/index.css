@@ -1,3 +1,41 @@
+:root {
+  --lilac: #B0A7CB;
+  --violet: #69385C;
+  --celadon: #BCEBCB;
+  --mustard: #FFC145;
+  --ochre: #D17B0F;
+  --red: #D64933;
+  --blue: #188FA7;
+  --darkblue: #326273;
+  --flame: #E4572E;
+  --grey: #939294;
+  --midnight: #055864;
+  --slate: #35524A;
+  --gunmetal: #0A2E36;
+  --green: #157F1F;
+  --lightblue: #48ACF0;
+  --sky: #5ADBFF;
+  --mustard: #FFDD4A;
+  --aquamarine: #56E39F;
+  --indigo: #2B4162;
+  --saffron: #EAC435;
+  --mediumblue: #345995;
+  --citrine: #C6C013;
+  --rich: #031927;
+  --darkpurple: #542E71;
+  --blush: #E75A7C;
+  --lichen: #5A716A;
+  --yellowgreen: #98CE00;
+  --rose: #542E71;
+  --mimi: #EDD2E0;
+  --lime: #BAFF29;
+  --pinky: #EE92C2;
+  --superorange: #FF8811;
+  --brightpink: #EF476F;
+  --plum: #F092DD;
+  --fog: #8DAA9D;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +49,146 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Fantasy {
+  background-color: var(--lilac);
+}
+
+.Contemporary {
+  background-color: var(--violet);
+}
+
+.Apocalyptic {
+  background-color: var(--mustard);
+}
+
+.African {
+  background-color: var(--ochre);
+}
+
+.Women {
+  background-color: var(--celadon);
+}
+
+.Historical {
+  background-color: var(--red);
+}
+
+.Personal {
+  background-color: var(--blue);
+}
+
+.Ethnic {
+  background-color: var(--darkblue);
+}
+
+.Native {
+  background-color: var(--flame);
+}
+
+.Colonialism {
+  background-color: var(--grey);;
+}
+
+.LGBTQ {
+  background-color: var(--midnight);
+}
+
+.Political {
+  background-color: var(--slate);
+}
+
+.Science {
+  background-color: var(--gunmetal);
+}
+
+.Space {
+  background-color: var(--green);
+}
+
+.Epic {
+  background-color: var(--lightblue);
+}
+
+.Action {
+  background-color: var(--sky);
+}
+
+.Classics {
+  background-color: var(--mustard);
+}
+
+.Romance {
+  background-color: var(--aquamarine);
+}
+
+.Regency {
+  background-color: var(--indigo);
+}
+
+.Sagas {
+  background-color: var(--saffron);
+}
+
+.Life {
+  background-color: var(--mediumblue);
+}
+
+.Marine {
+  background-color: var(--citrine);
+}
+
+.Essays {
+  background-color: var(--rich);
+}
+
+.Sagas {
+  background-color: var(--darkpurple);
+}
+
+.Psychological {
+  background-color: var(--blush);
+}
+
+.Coming {
+  background-color: var(--lichen);
+}
+
+.Asian {
+  background-color: var(--yellowgreen);
+}
+
+.Cultural {
+  background-color: var(--rose);
+}
+
+.Magical {
+  background-color: var(--mimi);
+}
+
+.Africa {
+  background-color: var(--lime);
+}
+
+.Dealing {
+  background-color: var(--pinky);
+}
+
+.Immigrants {
+  background-color: var(--superorange);
+}
+
+.Humorous {
+  background-color: var(--brightpink);
+}
+
+.Crime {
+  background-color: var(--plum);
+}
+
+.Horror {
+  background-color: var(--fog);
+}
+
+
+

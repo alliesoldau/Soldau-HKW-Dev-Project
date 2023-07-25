@@ -40,7 +40,9 @@ function TableRow({ book }) {
       <td key="page-count">{book.page_count}</td>
       <td key="genres">
         {genres.map((word, index) => (
-          <p key={index}>{word}</p>
+          <p key={index} className={word}>
+            {word}
+          </p>
         ))}
       </td>
       <td key="date-completed">{formattedDate}</td>
