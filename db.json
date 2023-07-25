@@ -30,7 +30,7 @@
         "url": "https://bookshop.org/p/books/heart-berries-a-memoir-terese-marie-mailhot/17272145?ean=9781640091603",
         "rating": 4,
         "page_count": 143,
-        "genres": ["Memoir", "Native & Aboriginal", "Colonialism"]
+        "genres": ["Memoir", "Native", "Colonialism"]
       },
       {
         "author": "Robert Jones Jr",
@@ -218,5 +218,82 @@
         "rating": 4.5,
         "page_count": 528,
         "genres": ["Crime", "Romance"]
+      },
+      {
+        "author": "Hiromi Kawakami",
+        "title": "People From My Neighbourhood",
+        "date_completed": "20220226",
+        "publisher": "Soft Skull",
+        "publisher_address": "1140 Broadway Ste 704, New York, New York, 10001",
+        "url": "https://bookshop.org/p/books/people-from-my-neighborhood-stories-hiromi-kawakami/17175785?ean=9781593767112",
+        "rating": 4,
+        "page_count": 176,
+        "genres": ["Humorous", "Absurdist", "Short Stories"]
+      },
+      {
+        "author": "Robin Kimmerer",
+        "title": "Braiding Sweetgrass",
+        "date_completed": "20220217",
+        "publisher": "Milkweed Editions",
+        "publisher_address": "1011 S Washington Ave, Minneapolis, MN 55415",
+        "url": "https://bookshop.org/p/books/braiding-sweetgrass-robin-wall-kimmerer/16712606?ean=9781571313560",
+        "rating": 4,
+        "page_count": 408,
+        "genres": ["Essays", "Native", "Anthropology"]
+      },
+      {
+        "author": "Akwaeke Emezi",
+        "title": "Freshwater",
+        "date_completed": "20220210",
+        "publisher": "Grove Press",
+        "publisher_address": "154 W 14th St 12 floor, New York, NY 10011",
+        "url": "https://bookshop.org/p/books/freshwater-akwaeke-emezi/16609236?ean=9780802128997",
+        "rating": 3,
+        "page_count": 240,
+        "genres": ["Psychological", "Magical Realism"]
+      },
+      {
+        "author": "Alicia Elliott",
+        "title": "A Mind Spread Out on the Ground",
+        "date_completed": "20220201",
+        "publisher": "Melville House Publishing",
+        "publisher_address": "46 John St, Brooklyn, NY 11201",
+        "url": "https://bookshop.org/p/books/a-mind-spread-out-on-the-ground-alicia-elliott/13325600?ean=9781612198668",
+        "rating": 4,
+        "page_count": 256,
+        "genres": ["Native", "Memoir"]
+      },
+      {
+        "author": "Clarence Jefferson Hall",
+        "title": "A Prison in the Woods",
+        "date_completed": "20220119",
+        "publisher": "University of Massachusetts Press",
+        "publisher_address": "671 N Pleasant St, Amherst, MA 01003",
+        "url": "https://bookshop.org/p/books/a-prison-in-the-woods-environment-and-incarceration-in-new-york-s-north-country-clarence-jefferson-hall/14650099?ean=9781625345363",
+        "rating": 2,
+        "page_count": 288,
+        "genres": ["Penology", "Political"]
+      },
+      {
+        "author": "Herman Melville",
+        "title": "Moby Dick",
+        "date_completed": "20220115",
+        "publisher": "Penguin Group",
+        "publisher_address": "1745 Broadway, New York, NY 10019",
+        "url": "https://bookshop.org/p/books/moby-dick-or-the-whale-herman-melville/18595562?ean=9780142437247",
+        "rating": 5,
+        "page_count": 720,
+        "genres": ["Classics", "Sea Stories"]
+      },
+      {
+        "author": "Lorraine M. Duvall",
+        "title": "And I Know Too Much To Pretend: A Memoir",
+        "date_completed": "20220102",
+        "publisher": "Bloated Toe Publishing",
+        "publisher_address": "PO Box 324 Peru, NY 12972",
+        "url": "https://www.lorraineduvall.com/books/and-i-know-too-much-to-pretend-a-memoir/",
+        "rating": 3,
+        "page_count": 192,
+        "genres": ["Memoir", "Historical"]
       }
 ]

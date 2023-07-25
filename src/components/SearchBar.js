@@ -15,7 +15,14 @@ function SearchBar({ filteredBooks, books, setFilteredBooks }) {
       const filteredResult = books.filter((item) =>
         Object.entries(item).some(([key, value]) => {
           // exclude the url and publisher_address --> searching that isn't helpful to us
-          if (key === "url" || key === "publisher_address") return false;
+          if (
+            key === "url" ||
+            key === "publisher_address" ||
+            key === "date_completed" ||
+            key === "rating" ||
+            key === "publisher"
+          )
+            return false;
           return value
             ?.toString()
             .toLowerCase()
@@ -33,7 +40,7 @@ function SearchBar({ filteredBooks, books, setFilteredBooks }) {
         type="text"
         value={searchQuery}
         onChange={handleSearchInputChange}
-        placeholder="Search table . . ."
+        placeholder="Search... "
       />
     </div>
   );
