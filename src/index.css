@@ -69,6 +69,7 @@ td {
 
 .arrows, .eyeball {
   opacity: 0;
+  font-size: 1em;
 }
 
 th:hover .arrows,
@@ -91,7 +92,7 @@ th:hover .eyeball:hover {
 }
 
 tr {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 tr:nth-child(even) {
@@ -150,6 +151,30 @@ a:hover {
   font-weight: bold;
 }
 
-.hidden-columns-dd {
-  color: yellow;
+.hidden-columns-container {
+  display: flex;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 1.5em;
+  font-family: 'Open Sans';
+}
+
+.custom-option {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.open-eye {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.custom-option:hover .open-eye {
+  color: var(--table1);
+  filter: brightness(1);
 }
