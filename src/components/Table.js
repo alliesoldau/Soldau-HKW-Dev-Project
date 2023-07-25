@@ -1,9 +1,15 @@
-// import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TableRow from "./TableRow";
 
 function Table({ books }) {
+  useEffect(() => {
+    setTableBooks([...books]);
+  }, [books]);
   // create a copy of books so that I can manipulate the order when I want to sort it by a specific column
-  const tableBooks = [...books];
+  const [tableBooks, setTableBooks] = useState([...books]);
+  const [lastHeader, setLastHeader] = useState();
+  const [ascent, setAscent] = useState(true);
+
   // extract the column headers from the first object in the data array
   let headers = tableBooks.length > 0 ? Object.keys(tableBooks[0]) : [];
   // remove the id column from the headers array because we don't want to display that
@@ -25,19 +31,68 @@ function Table({ books }) {
     <TableRow key={book.id} book={book} />
   ));
 
+  // handles sorting
+  function handleSort(index) {
+    let sorted = [...tableBooks];
+    let selectedHeader = headers[index];
+    console.log("selectedHeader", selectedHeader);
+    console.log("lastheader", lastHeader);
+    if (selectedHeader === lastHeader) {
+      let previousOrder = ascent;
+      setAscent(!previousOrder);
+    } else {
+      setAscent(true);
+    }
+    // sort by number and date columns
+    if (
+      selectedHeader === "page_count" ||
+      selectedHeader === "rating" ||
+      selectedHeader === "date_completed"
+    ) {
+      sorted.sort((a, b) => a[selectedHeader] - b[selectedHeader]);
+      // sort by text columns
+    } else if (selectedHeader === "author" || selectedHeader === "title") {
+      function compareAlphas(a, b) {
+        const alphaA = a[selectedHeader].toLowerCase();
+        const alphaB = b[selectedHeader].toLowerCase();
+        if (alphaA < alphaB) {
+          return -1;
+        }
+        if (alphaA > alphaB) {
+          return 1;
+        }
+        return 0;
+      }
+      sorted.sort(compareAlphas);
+    }
+    if (!ascent) {
+      sorted.reverse();
+    }
+    setTableBooks(sorted);
+    setLastHeader(selectedHeader);
+  }
+
   return (
-    <>
+    <div className="table">
       <table>
         <thead>
           <tr>
-            {headersFormatted.map((header) => (
-              <th key={header}>{header}</th>
+            {headersFormatted.map((header, index) => (
+              <th
+                key={headers[index]}
+                value={headers[index]}
+                onClick={() => {
+                  handleSort(index);
+                }}
+              >
+                {header}
+              </th>
             ))}
           </tr>
         </thead>
         <tbody>{tableRows}</tbody>
       </table>
-    </>
+    </div>
   );
 }
 

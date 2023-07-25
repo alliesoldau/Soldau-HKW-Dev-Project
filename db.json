@@ -8,7 +8,7 @@
         "url": "https://bookshop.org/p/books/brown-girl-in-the-ring-nalo-hopkinson/11017317?ean=9780446674331",
         "rating": 5,
         "page_count": 250,
-        "genres": ["Fantasy", "Contemporary", "Apocalyptic & Post-Apocalyptic", "African American", "Women"]
+        "genres": ["Fantasy", "Apocalyptic", "African"]
       },
       {
         "author": "Megan Campisi",
@@ -30,7 +30,7 @@
         "url": "https://bookshop.org/p/books/heart-berries-a-memoir-terese-marie-mailhot/17272145?ean=9781640091603",
         "rating": 4,
         "page_count": 143,
-        "genres": ["Personal Memoirs", "Women", "Ethnic & Regional", "Ethnic Studies", "Native American", "Colonialism & Post-Colonialism"]
+        "genres": ["Memoir", "Native & Aboriginal", "Colonialism"]
       },
       {
         "author": "Robert Jones Jr",
@@ -39,9 +39,9 @@
         "publisher": "G.P. Putnam's Sons",
         "publisher_address": "375 Hudson Street New York, NY 10014",
         "url": "https://bookshop.org/p/books/the-prophets-robert-jones-jr/14728111?ean=9780593085691",
-        "rating": 4,
+        "rating": 4.5,
         "page_count": 416,
-        "genres": ["Historical", "African American"]
+        "genres": ["Historical", "African", "LGBTQ"]
       },
       {
         "author": "Jessica Anthony",
@@ -50,9 +50,9 @@
         "publisher": "Back Bay Books",
         "publisher_address": "1271 Avenue of the Americas 11th Floor New York NY 10020",
         "url": "https://bookshop.org/p/books/enter-the-aardvark-jessica-anthony/9142037?ean=9780316496131",
-        "rating": 3,
+        "rating": 3.25,
         "page_count": 192,
-        "genres": ["LGBTQ", "Political"]
+        "genres": ["LGBTQ", "Political", "Humorous"]
       },
       {
         "author": "Tamsyn Muir",
@@ -61,9 +61,9 @@
         "publisher": "Tor Publishing Group",
         "publisher_address": "120 Broadway, New York, NY 10271",
         "url": "https://bookshop.org/p/books/harrow-the-ninth-tamsyn-muir/13198469?ean=9781250313218",
-        "rating": 3,
+        "rating": 3.5,
         "page_count": 560,
-        "genres": ["Science Fiction", "Space Opera", "Fantasy", "Epic", "Action & Adventure"]
+        "genres": ["Sci Fi", "Fantasy", "LGBTQ"]
       },
       {
         "author": "Becky Chambers",
@@ -72,9 +72,9 @@
         "publisher": "Tor Publishing Group",
         "publisher_address": "120 Broadway, New York, NY 10271",
         "url": "https://bookshop.org/p/books/a-psalm-for-the-wild-built-becky-chambers/15125608?ean=9781250236210",
-        "rating": 3,
+        "rating": 2.5,
         "page_count": 160,
-        "genres": ["Science Fiction", "Action & Adventure", "Apocalyptic & Post-Apocalyptic"]
+        "genres": ["Sci Fi", "Apocalyptic", "LGBTQ"]
       },
       {
         "author": "Jane Austen",
@@ -85,18 +85,18 @@
         "url": "https://bookshop.org/p/books/pride-and-prejudice-jane-austen/15657135?ean=9780141439518",
         "rating": 5,
         "page_count": 448,
-        "genres": ["Classics", "Romance", "Historical", "Regency"]
+        "genres": ["Classics", "Romance", "Historical"]
       },
       {
         "author": "Francesca Ekwuyasi",
         "title": "Butter Honey Pig Bread",
         "date_completed": "20230501",
         "publisher": "Arsenal Pulp Press",
-        "publisher_address": "211 Georgia St E, Vancouver, British Columbia, V6A 1Z6, Canada",
+        "publisher_address": "211 Georgia St E, Vancouver, British Columbia, V6A 1Z6",
         "url": "https://bookshop.org/p/books/butter-honey-pig-bread-francesca-ekwuyasi/14144152?ean=9781551528236",
         "rating": 5,
         "page_count": 368,
-        "genres": ["African American", "Women", "LGBTQ", "Sagas"]
+        "genres": ["African", "Women", "LGBTQ"]
       },
       {
         "author": "Sabrina Imbler",
@@ -105,9 +105,9 @@
         "publisher": "Little, Brown and Company",
         "publisher_address": "1290 Avenue Of The Americas, Suite 6, New York, NY",
         "url": "https://bookshop.org/p/books/how-far-the-light-reaches-a-life-in-ten-sea-creatures-sabrina-imbler/18790437?ean=9780316540537",
-        "rating": 4,
+        "rating": 3.5,
         "page_count": 272,
-        "genres": ["LGBTQ", "Life Sciences", "Marine Biology", "Essays"]
+        "genres": ["LGBTQ", "Essays"]
       },
       {
         "author": "Jenny Offill",
@@ -118,7 +118,7 @@
         "url": "https://bookshop.org/p/books/weather-jenny-offill/15584183?ean=9780345806901",
         "rating": 3,
         "page_count": 224,
-        "genres": ["Sagas", "Psychological"]
+        "genres": ["Psychological", "Women"]
       },
       {
         "author": "Zaina Arafat",
@@ -129,7 +129,7 @@
         "url": "https://bookshop.org/p/books/you-exist-too-much-zaina-arafat/13006757?ean=9781646220595",
         "rating": 4,
         "page_count": 272,
-        "genres": ["Coming of Age", "LGBTQ", "Women"]
+        "genres": ["LGBTQ", "Women", "Immigrants"]
       },
       {
         "author": "Min Jin Lee",
@@ -140,7 +140,7 @@
         "url": "https://bookshop.org/p/books/pachinko-national-book-award-finalist-lee-min-jin/8324329?ean=9781455563920",
         "rating": 5,
         "page_count": 512,
-        "genres": ["Asian American", "Cultural Heritage", "Historical", "Family Life"]
+        "genres": ["Asian", "Historical"]
       },
       {
         "author": "Nan Nkweti",
@@ -149,9 +149,9 @@
         "publisher": "Graywolf Press",
         "publisher_address": "212 N 3rd Ave #485, Minneapolis, MN 55401",
         "url": "https://bookshop.org/p/books/walking-on-cowrie-shells-stories-nana-nkweti/15049827?ean=9781644450543",
-        "rating": 5,
+        "rating": 4.75,
         "page_count": 176,
-        "genres": ["Africa", "Dealing with Loss", "Immigrants & Expats", "Magical Realism"]
+        "genres": ["African", "Immigrants"]
       },
       {
         "author": "Travis Baldree",
@@ -171,9 +171,9 @@
         "publisher": "Vintage",
         "publisher_address": "1745 Broadway New York, NY 10019",
         "url": "https://bookshop.org/p/books/crime-and-punishment-fyodor-dostoevsky/18229188?ean=9780679734505",
-        "rating": 2,
+        "rating": 2.25,
         "page_count": 624,
-        "genres": ["Classics", "Crime", "Psychological", "Historical", "Romance"]
+        "genres": ["Classics", "Crime", "Psychological"]
       },
       {
         "author": "P. Djeli Clark",
@@ -182,9 +182,9 @@
         "publisher": "Tor Publishing Group",
         "publisher_address": "120 Broadway, New York, NY 10271",
         "url": "https://bookshop.org/p/books/ring-shout-p-djeli-clark/13705280?ean=9781250767028",
-        "rating": 5,
+        "rating": 4.75,
         "page_count": 192,
-        "genres": ["Fantasy", "Dark Fantasy", "Historical", "Horror"]
+        "genres": ["Fantasy", "Historical", "Horror"]
       },
       {
         "author": "Neon Yang",
@@ -195,7 +195,7 @@
         "url": "https://bookshop.org/p/books/the-tensorate-series-the-black-tides-of-heaven-the-red-threads-of-fortune-the-descent-of-monsters-the-ascent-to-godhood-neon-yang/16008735?ean=9781250807540",
         "rating": 4,
         "page_count": 480,
-        "genres": ["Fantasy", "Epic", "Action & Adventure"]
+        "genres": ["Fantasy", "Asian"]
       },
       {
         "author": "Nghi Vo",
@@ -206,7 +206,7 @@
         "url": "https://bookshop.org/p/books/the-chosen-and-the-beautiful-nghi-vo/15376635?ean=9781250820129",
         "rating": 5,
         "page_count": 288,
-        "genres": ["Fantasy", "Historical", "Asian American"]
+        "genres": ["Fantasy", "Historical", "Asian"]
       },
       {
         "author": "Michael Christie",
@@ -215,8 +215,8 @@
         "publisher": "Hogarth Press",
         "publisher_address": "Hogarth House, 34 Paradise Road, Richmond, London",
         "url": "https://bookshop.org/p/books/greenwood-michael-christie/9574621?ean=9781984822017",
-        "rating": 5,
+        "rating": 4.5,
         "page_count": 528,
-        "genres": ["Sagas", "Family Life"]
+        "genres": ["Crime", "Romance"]
       }
 ]

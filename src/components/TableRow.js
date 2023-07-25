@@ -34,21 +34,41 @@ function TableRow({ book }) {
 
   return (
     <tr key={book.id}>
-      <td key="title">{book.title}</td>
-      <td key="author">{book.author}</td>
-      <td key="rating">{book.rating}</td>
-      <td key="page-count">{book.page_count}</td>
-      <td key="genres">
-        {genres.map((word, index) => (
-          <p key={index} className={word}>
-            {word}
-          </p>
-        ))}
+      <td key="title" className="title">
+        {book.title}
       </td>
-      <td key="date-completed">{formattedDate}</td>
-      <td key="publisher">{book.publisher}</td>
-      <td key="publisher-address">{book.publisher_address}</td>
-      <td key="url">
+      <td key="author" className="author">
+        {book.author}
+      </td>
+      <td key="rating" className="rating">
+        <div
+          className="stars"
+          style={{ "--rating": book.rating }}
+          aria-label="Rating of this product is 2.3 out of 5."
+        ></div>
+      </td>
+      <td key="page-count" className="page-count">
+        {book.page_count}
+      </td>
+      <td key="genres" className="genres">
+        <div className="genres-container">
+          {genres.map((word, index) => (
+            <div key={index} id="genre" className={word}>
+              {word}
+            </div>
+          ))}
+        </div>
+      </td>
+      <td key="date-completed" className="date">
+        {formattedDate}
+      </td>
+      <td key="publisher" className="publisher">
+        {book.publisher}
+      </td>
+      <td key="publisher-address" className="address">
+        {book.publisher_address}
+      </td>
+      <td key="url" className="url">
         <a href={book.url} target="_blank" rel="noopener noreferrer">
           LINK
         </a>

@@ -1,194 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 :root {
-  --lilac: #B0A7CB;
-  --violet: #69385C;
-  --celadon: #BCEBCB;
-  --mustard: #FFC145;
-  --ochre: #D17B0F;
-  --red: #D64933;
-  --blue: #188FA7;
-  --darkblue: #326273;
-  --flame: #E4572E;
-  --grey: #939294;
-  --midnight: #055864;
-  --slate: #35524A;
-  --gunmetal: #0A2E36;
-  --green: #157F1F;
-  --lightblue: #48ACF0;
-  --sky: #5ADBFF;
-  --mustard: #FFDD4A;
-  --aquamarine: #56E39F;
-  --indigo: #2B4162;
-  --saffron: #EAC435;
-  --mediumblue: #345995;
-  --citrine: #C6C013;
-  --rich: #031927;
-  --darkpurple: #542E71;
-  --blush: #E75A7C;
-  --lichen: #5A716A;
-  --yellowgreen: #98CE00;
-  --rose: #542E71;
-  --mimi: #EDD2E0;
-  --lime: #BAFF29;
-  --pinky: #EE92C2;
-  --superorange: #FF8811;
-  --brightpink: #EF476F;
-  --plum: #F092DD;
-  --fog: #8DAA9D;
+  --orange1: #c36f09;
+  --orange2: #a75e06;
+  --blue1: #04a5ba;
+  --blue2: #02899a;
+  --blue3: #027382;
+  --blue4: #025964;
+  --red1: #d81159;
+  --red2: #d3356f;
+  --red3: #d4467a;
+  --purple1: #8a4ea3;
+  --purple2: #843ca3;
+  --purple3: #822ca7;
+  --purple4: #7f1aab;
+  --mint1: #239a96;
+  --mint2: #177673;
+  --green1: #13957d;
+  --green2: #0e6e5d;
+  --green3: #065143;
+  --rose1: #b83b6f;
+  --rose2: #8f2d56;
+  --black: #100f24;
+  --grey: #242235;
+  --white: #f5feff;
+  --star-size: 1.5em;
+  --star-color: #c3c6c7;
+  --star-background: #fc0;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Open Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.table {
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+}
+
+table {
+  width: 90%;
+  background-color: var(--black);
+  border: 1px solid rgba(0,0,0, 0.25);
+  border-spacing: 0px;
+  color: var(--white);
+}
+
+th {
+  border-bottom: 2px solid rgba(0,0,0, 0.25);
+  font-size: 1.2em;
+  padding: 0.5em;
+}
+
+tr {
+  font-size: 0.7em;
+}
+
+tr:nth-child(even) {
+  background-color: var(--grey);
+}
+
+td {
+  padding: 0.5em;
+}
+
+.stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.title, .author, .page-count, .date, .url {
+  width: 10em;
+}
+.rating, .page-count, .date, .url {
+  text-align: center;
+}
+
+.address {
+  width: 15em;
+}
+
+.genres-container {
+  display: flex;
+  flex-direction: row;
+  width: 15em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#genre {
+  color: var(--white);
+  text-align: center;
+  border: 2px solid rgba(0,0,0, 0.25);
+  border-radius: 500px;
+  padding: 0.25em;
+  margin: 0.2em;
+  width: max-content;
+  font-size: 0.8em;
 }
 
 .Fantasy {
-  background-color: var(--lilac);
+  background-color: var(--orange1);
+}
+.Sci {
+  background-color: var(--orange2);
 }
 
-.Contemporary {
-  background-color: var(--violet);
-}
-
-.Apocalyptic {
-  background-color: var(--mustard);
-}
-
-.African {
-  background-color: var(--ochre);
-}
-
-.Women {
-  background-color: var(--celadon);
-}
-
-.Historical {
-  background-color: var(--red);
-}
-
-.Personal {
-  background-color: var(--blue);
-}
-
-.Ethnic {
-  background-color: var(--darkblue);
-}
 
 .Native {
-  background-color: var(--flame);
+  background-color: var(--blue1);
+}
+.African {
+  background-color: var(--blue2);
+}
+.Immigrants {
+  background-color: var(--blue3);
+}
+.Asian {
+  background-color: var(--blue4);
 }
 
+
+.Memoir {
+  background-color: var(--mint1);
+}
+.Essays {
+  background-color: var(--mint2);
+}
+
+
+.Political {
+  background-color: var(--red1);
+}
 .Colonialism {
-  background-color: var(--grey);;
+  background-color: var(--red2);
+}
+.Apocalyptic {
+  background-color: var(--red3);
 }
 
 .LGBTQ {
-  background-color: var(--midnight);
+  background-color: var(--rose1);
+}
+.Women {
+  background-color: var(--rose2);
 }
 
-.Political {
-  background-color: var(--slate);
+.Historical {
+  background-color: var(--purple1);
 }
-
-.Science {
-  background-color: var(--gunmetal);
-}
-
-.Space {
-  background-color: var(--green);
-}
-
-.Epic {
-  background-color: var(--lightblue);
-}
-
-.Action {
-  background-color: var(--sky);
-}
-
 .Classics {
-  background-color: var(--mustard);
+  background-color: var(--purple2);
 }
-
 .Romance {
-  background-color: var(--aquamarine);
+  background-color: var(--purple3);
 }
-
-.Regency {
-  background-color: var(--indigo);
-}
-
-.Sagas {
-  background-color: var(--saffron);
-}
-
-.Life {
-  background-color: var(--mediumblue);
-}
-
-.Marine {
-  background-color: var(--citrine);
-}
-
-.Essays {
-  background-color: var(--rich);
-}
-
-.Sagas {
-  background-color: var(--darkpurple);
+.Humorous {
+  background-color: var(--purple4);
 }
 
 .Psychological {
-  background-color: var(--blush);
+  background-color: var(--green1);
 }
-
-.Coming {
-  background-color: var(--lichen);
-}
-
-.Asian {
-  background-color: var(--yellowgreen);
-}
-
-.Cultural {
-  background-color: var(--rose);
-}
-
-.Magical {
-  background-color: var(--mimi);
-}
-
-.Africa {
-  background-color: var(--lime);
-}
-
-.Dealing {
-  background-color: var(--pinky);
-}
-
-.Immigrants {
-  background-color: var(--superorange);
-}
-
-.Humorous {
-  background-color: var(--brightpink);
-}
-
 .Crime {
-  background-color: var(--plum);
+  background-color: var(--green2);
 }
-
 .Horror {
-  background-color: var(--fog);
+  background-color: var(--green3);
 }
-
-
-
