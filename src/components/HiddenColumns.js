@@ -76,10 +76,12 @@ function HiddenColumns({ hideShow, setHideShow, headers, headersFormatted }) {
     control: (provided) => ({
       ...provided,
       backgroundColor: "#f5feff",
+      fontSize: "0.9em",
     }),
     placeholder: (provided) => ({
       ...provided,
       color: "#100f24",
+      fontSize: "0.9em",
     }),
   };
 

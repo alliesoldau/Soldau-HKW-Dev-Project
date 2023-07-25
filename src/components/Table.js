@@ -3,10 +3,11 @@ import TableRow from "./TableRow";
 import HiddenColumns from "./HiddenColumns";
 import { FaRegEyeSlash, FaSort } from "react-icons/fa";
 
-function Table({ books }) {
+function Table({ filteredBooks }) {
   useEffect(() => {
-    setTableBooks([...books]);
-    let booksHeaders = books.length > 0 ? Object.keys(books[0]) : [];
+    setTableBooks([...filteredBooks]);
+    let booksHeaders =
+      filteredBooks.length > 0 ? Object.keys(filteredBooks[0]) : [];
     booksHeaders.shift();
     // get our raw headers
     setHeaders(booksHeaders);
@@ -17,9 +18,9 @@ function Table({ books }) {
     formatted.pop();
     formatted.push("Purchase Link");
     setHeadersFormatted(formatted);
-  }, [books]);
+  }, [filteredBooks]);
   // create a copy of books so that I can manipulate the order when I want to sort it by a specific column
-  const [tableBooks, setTableBooks] = useState([...books]);
+  const [tableBooks, setTableBooks] = useState([...filteredBooks]);
   const [lastHeader, setLastHeader] = useState();
   const [ascent, setAscent] = useState(false);
   const [headers, setHeaders] = useState([]);

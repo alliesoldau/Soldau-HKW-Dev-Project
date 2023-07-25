@@ -39,6 +39,7 @@ table {
   border-spacing: 0px;
   color: var(--white);
   table-layout: fixed;
+  border-radius: 7px;
 }
 
 th {
@@ -164,6 +165,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: 0.9em;
 }
 
 .open-eye {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Table from "./components/Table";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -17,7 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      <Table books={filteredBooks} />
+      <SearchBar
+        filteredBooks={filteredBooks}
+        setFilteredBooks={setFilteredBooks}
+      />
+      <Table filteredBooks={filteredBooks} />
     </div>
   );
 }
