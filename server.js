@@ -14,7 +14,7 @@ const db = new sqlite3.Database(dbPath, (err) => {
   }
 });
 
-app.get("/api/data", (req, res) => {
+app.get("/books", (req, res) => {
   // query sqlite3 database here and return the data as a JSON response
   db.all("SELECT * FROM books;", (err, rows) => {
     if (err) {

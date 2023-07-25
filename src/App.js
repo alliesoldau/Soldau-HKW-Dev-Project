@@ -1,13 +1,12 @@
 import "./index.css";
-// import axios from "axios";
 import { useState, useEffect } from "react";
 import Table from "./components/Table";
 
 function App() {
-  const [books, setBooks] = useState({});
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("/api/data")
+    fetch("/books")
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -15,8 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>hey</p>
-      <Table />
+      <Table books={books} />
     </div>
   );
 }

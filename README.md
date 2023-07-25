@@ -1,9 +1,11 @@
-npm install axios
+
 npm install express
 npm install sqlite3
 install python
 
 run server.js to start up the server
+
+http://localhost:3000/books
 
 # Here are the project requirements we talked about:
 

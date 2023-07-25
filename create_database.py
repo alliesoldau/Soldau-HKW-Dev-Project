@@ -12,15 +12,15 @@ cursor.execute("DROP TABLE if exists books");
 cursor.execute("""CREATE Table if not exists books
                 (
                     id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                    author STRING,
                     title STRING,
+                    author STRING,
+                    rating FLOAT,
+                    page_count INT,
+                    genres STRING,
                     date_completed DATETIME,
                     publisher STRING,
                     publisher_address STRING,
-                    url STRING,
-                    rating FLOAT,
-                    page_count INT,
-                    genres STRING
+                    url STRING
                 )
                   """)
 
