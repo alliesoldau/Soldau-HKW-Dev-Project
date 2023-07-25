@@ -44,7 +44,7 @@ function Table({ books }) {
 
   // map through the table books and fill out each row with the data
   const tableRows = tableBooks.map((book) => (
-    <TableRow key={book.id} book={book} />
+    <TableRow key={book.id} book={book} hideShow={hideShow} />
   ));
 
   // handles sorting
