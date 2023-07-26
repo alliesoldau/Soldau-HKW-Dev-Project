@@ -15,7 +15,7 @@ function Table({ filteredBooks }) {
     let formatted = booksHeaders.map((str) =>
       capitalizeAllWords(str.replace(/_/g, " "))
     );
-    formatted.pop();
+    formatted.splice(formatted.length - 2, 2);
     formatted.push("Purchase Link");
     setHeadersFormatted(formatted);
   }, [filteredBooks]);

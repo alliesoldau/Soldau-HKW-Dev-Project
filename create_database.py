@@ -20,6 +20,7 @@ cursor.execute("""CREATE Table if not exists books
                     date_completed DATETIME,
                     publisher STRING,
                     publisher_address STRING,
+                    gmap_url STRING,
                     url STRING
                 )
                   """)
@@ -34,10 +35,10 @@ books = json.load(f)
 for book in books:
     genres_str = ', '.join(book['genres'])
     book_data = (book['author'], book['title'], book['date_completed'], book['publisher'],
-                 book['publisher_address'], book['url'], book['rating'], book['page_count'], genres_str)
+                 book['publisher_address'], book['url'], book['gmap_url'], book['rating'], book['page_count'], genres_str)
     cursor.execute("""INSERT INTO books
-                    (author, title, date_completed, publisher, publisher_address, url, rating, page_count, genres)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    (author, title, date_completed, publisher, publisher_address, url, gmap_url, rating, page_count, genres)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """, book_data)
   
 # close file 

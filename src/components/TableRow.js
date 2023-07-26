@@ -1,6 +1,7 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaMapPin } from "react-icons/fa";
 
 function TableRow({ book, hideShow }) {
+  console.log(book);
   // turn the genres string into an array so we can map through it and display it programatically
   const genres = book.genres.split(", ");
   // format the date to be more standard
@@ -74,7 +75,15 @@ function TableRow({ book, hideShow }) {
         id="address"
         className={hideShow.publisher_address}
       >
-        {book.publisher_address}
+        <a
+          href={book.gmap_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link"
+        >
+          {/* <FaMapPin className="link" id="pin" /> */}
+          {book.publisher_address}
+        </a>
       </td>
       <td key="url" id="url" className={hideShow.url}>
         <a href={book.url} target="_blank" rel="noopener noreferrer">

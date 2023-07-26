@@ -45,6 +45,8 @@ table {
 th {
   padding: 0.5em;
   background-color: rgba(36, 34, 53, 0.9);
+  position: sticky;
+  top: 0;
 }
 
 td {
@@ -146,6 +148,7 @@ td {
 
 a {
   color: var(--white);
+  text-decoration: none;
 }
 
 a:hover {
