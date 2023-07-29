@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import TableRow from "./TableRow";
 import HiddenColumns from "./HiddenColumns";
+import SearchBar from "./SearchBar";
+import TableFilter from "./TableFilter";
 import { FaRegEyeSlash, FaSort } from "react-icons/fa";
 
-function Table({ filteredBooks }) {
+function Table({ filteredBooks, setFilteredBooks, books }) {
   useEffect(() => {
     setTableBooks([...filteredBooks]);
     let booksHeaders =
@@ -109,11 +111,13 @@ function Table({ filteredBooks }) {
 
   return (
     <>
-      <HiddenColumns
+      <TableFilter
         hideShow={hideShow}
         setHideShow={setHideShow}
         headers={headers}
         headersFormatted={headersFormatted}
+        books={books}
+        setFilteredBooks={setFilteredBooks}
       />
       <div className="table">
         {headers.length > 0 ? (

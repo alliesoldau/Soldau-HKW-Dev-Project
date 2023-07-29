@@ -5,7 +5,7 @@ install python
 npm install react-icons
 npm install react-select
 
-run server.js to start up the server
+node server.js to start up the server
 npm start to get the frontend running
 
 http://localhost:3000/books

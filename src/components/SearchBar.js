@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-function SearchBar({ filteredBooks, books, setFilteredBooks }) {
-  // set Up State Variables
+function SearchBar({ books, setFilteredBooks }) {
+  // set Up state variables
   const [searchQuery, setSearchQuery] = useState("");
 
-  // handle Search Input
+  // handle search input
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -20,7 +20,8 @@ function SearchBar({ filteredBooks, books, setFilteredBooks }) {
             key === "publisher_address" ||
             key === "date_completed" ||
             key === "rating" ||
-            key === "publisher"
+            // key === "publisher" ||
+            key === "gmap_url"
           )
             return false;
           return value
@@ -30,7 +31,6 @@ function SearchBar({ filteredBooks, books, setFilteredBooks }) {
         })
       );
       setFilteredBooks(filteredResult);
-      console.log(filteredResult);
     }
   }, [searchQuery, books, setFilteredBooks]);
 
