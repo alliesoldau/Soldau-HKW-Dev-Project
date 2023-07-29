@@ -10,8 +10,7 @@ function TableFilter({
   headersFormatted,
 }) {
   return (
-    <div>
-      <p>TableFilter</p>
+    <div className="table-filter">
       <HiddenColumns
         hideShow={hideShow}
         setHideShow={setHideShow}
