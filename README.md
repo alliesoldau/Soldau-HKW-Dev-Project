@@ -1,5 +1,24 @@
 # Allie Soldau - HKW Dev Project
 
+## Project Requirements:
+
+A frontend table built with React that displays data from a database (example data from any subject is fine).
+This table should contain:
+
+- 8 columns and at least 20 rows of data
+- 1 column should contain dates
+- 1 column should contain numbers
+- 1 column should contain an alphanumeric string
+- 1 column should contain text and a hyperlink
+
+UI requirements:
+
+- A search input that filters the data
+- Sortable column data with a UI indicator
+- A UI feature that allows the user to hide/show the table columns
+
+Feel free to include any other UI elements or interactions with this table that you would like, but the only items required for presentation are those above.
+
 ## Instructions for How to Run the Code
 
 1. Install all dependancies
@@ -23,29 +42,22 @@
 
 ## Database shooting
 
-- Reset the database
+- If your database isn't populated, try resetting the database
   - Delete the `book_data.sqlite` file from the root directory
   - Run `python3 create_database.py` in your terminal to reset the database
   - Open the newly created `book_data.sqlite` file, click the refresh spiral arrow in the top left of the database screen, and click on the `books` table. This should display the books table with all cells filled out
 
+## Project Overview
 
-<!-- TO DO: make sure the site is all accessible!  -->
+This project was created with a React front end and SQLite3 backend.
 
-# Here are the project requirements we talked about:
+The backend was populated via a Python3 script. The database will come to you pre-loaded, but you can view the `create_database.py` file if you want to see how I created the SQLite3 database and populated it with data from the `db.json` file.
 
-A frontend table built with React that displays data from a database (example data from any subject is fine).
-This table should contain:
+I chose to create a table displaying the books I've read thus far in 2023. When displayed on the frontend, the table format is as follows:
 
-- 8 columns and at least 20 rows of data
-- 1 column should contain dates
-- 1 column should contain numbers
-- 1 column should contain an alphanumeric string
-- 1 column should contain text and a hyperlink
-
-UI requirements:
-
-- A search input that filters the data
-- Sortable column data with a UI indicator
-- A UI feature that allows the user to hide/show the table columns
-
-Feel free to include any other UI elements or interactions with this table that you would like, but the only items required for presentation are those above.
+**2023 Book Log**
+|Title|Author|Rating|Page Count|Genres|Date Completed|Publisher|Publisher Address|Purchase Link|
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|1|'Store 1'|1|'Store 1'|1|'Store 1'|1|'Store 1'|1|'Store 1'|1|'Store 1'|'Store 1'|
+|2|'Store 2'|1|'Store 1'|2|'Store 2'|1|'Store 1'|2|'Store 2'|1|'Store 1'|'Store 1'|
+|3|'Store 3'|1|'Store 1'|2|'Store 2'|1|'Store 1'|2|'Store 2'|1|'Store 1'|'Store 1'|
