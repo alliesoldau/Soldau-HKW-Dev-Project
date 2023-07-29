@@ -72,6 +72,18 @@
         "genres": ["LGBTQ", "Political", "Humorous"]
       },
       {
+        "author": "Stephen King",
+        "title": "The Eyes of the Dragon",
+        "date_completed": "20230609",
+        "publisher": "Gallery Books",
+        "publisher_address": "1230 6th Ave, New York, NY 10020",
+        "gmap_url": "https://goo.gl/maps/5dFdYKWzDXf9EDmd9",
+        "url": "https://bookshop.org/p/books/the-eyes-of-the-dragon-stephen-king/6774237?gclid=CjwKCAjw8ZKmBhArEiwAspcJ7hbu68_LOqa5kSV2Dh2f5j4iNo0zxBDibmG_XCD3tGpsCeoskdG_TxoCpacQAvD_BwE",
+        "rating": 3.5,
+        "page_count": 384,
+        "genres": ["Fantasy", "Thriller", "Epic"]
+      },
+      {
         "author": "Tamsyn Muir",
         "title": "Harrow the Ninth",
         "date_completed": "20230602",

@@ -21,7 +21,8 @@ function SearchBar({ books, setFilteredBooks }) {
             key === "publisher_address" ||
             key === "date_completed" ||
             key === "rating" ||
-            key === "gmap_url"
+            key === "gmap_url" ||
+            key === "page_count"
           )
             return false;
           return value

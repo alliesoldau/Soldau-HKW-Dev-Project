@@ -10,7 +10,6 @@ npm start to get the frontend running
 
 http://localhost:3000/books
 
-<!-- TO DO: format search bar; add title to page; maybe add in filtering; make it so you can edit the rating; make it so you can add in more books; add in more data; maybe add in google maps link?? -->
 <!-- TO DO: make sure the site is all accessible!  -->
 
 # Here are the project requirements we talked about:
