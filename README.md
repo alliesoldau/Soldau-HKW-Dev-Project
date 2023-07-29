@@ -40,16 +40,26 @@ Feel free to include any other UI elements or interactions with this table that 
    - This should automatically open a new tab in your browser window
    - If you don't see it, try visiting [http://localhost:4000/](http://localhost:4000/) from your browser address bar
 
-## Database shooting
+## Database Troubleshooting
 
 - If your database isn't populated, try resetting the database
   - Delete the `book_data.sqlite` file from the root directory
   - Run `python3 create_database.py` in your terminal to reset the database
   - Open the newly created `book_data.sqlite` file, click the refresh spiral arrow in the top left of the database screen, and click on the `books` table. This should display the books table with all cells filled out
 
+## Project Planning
+
+[Figma](https://www.figma.com/file/Z08wB30svjVtii540HaeXy/Soldau---HKW-Dev-Project?type=whiteboard&node-id=2%3A76867&t=MQkMvvr9dBoFbVBp-1)
+
+- Contains timeline and website skeletons
+
+[DBDiagram](https://dbdiagram.io/d/64c542ee02bd1c4a5ee86707)
+
+- Contains database planning
+
 ## Project Overview
 
-This project was created with a React front end and SQLite3 backend.
+This project was created with a React front end and SQLite3 backend. It is meant to be run locally.
 
 The backend was populated via a Python3 script. The database will come to you pre-loaded, but you can view the `create_database.py` file if you want to see how I created the SQLite3 database and populated it with data from the `db.json` file.
 

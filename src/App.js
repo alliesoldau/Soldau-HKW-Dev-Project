@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Table from "./components/Table";
-import SearchBar from "./components/SearchBar";
 
 function App() {
   const [books, setBooks] = useState([]);
