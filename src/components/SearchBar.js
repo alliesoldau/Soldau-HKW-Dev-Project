@@ -40,7 +40,6 @@ function SearchBar({ books, setFilteredBooks }) {
         type="text"
         value={searchQuery}
         onChange={handleSearchInputChange}
-        // placeholder={"\uf002"}
         className="search-bar-input"
       />
     </div>

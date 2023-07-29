@@ -7,6 +7,7 @@ function HiddenColumns({ hideShow, setHideShow, headers, headersFormatted }) {
 
   // state variable to track the selected value
   const [selectedValue, setSelectedValue] = useState("");
+  // const [placeHolderColor, setPlaceHolderColor] = useState("#242235");
 
   // ref for the select element
   const selectRef = useRef();
@@ -71,8 +72,11 @@ function HiddenColumns({ hideShow, setHideShow, headers, headersFormatted }) {
     );
   };
 
+  // transform the hideColumns array into an array of objects with label and value properties
+  const options = hideColumns.map((key) => ({ label: key, value: key }));
+
   // inline styles for the Select component --> resources say inline styling works better for background of Select over css
-  const selectStyles = {
+  let columnsDisplay = {
     control: (provided) => ({
       ...provided,
       backgroundColor: "#f5feff",
@@ -82,11 +86,9 @@ function HiddenColumns({ hideShow, setHideShow, headers, headersFormatted }) {
       ...provided,
       color: "#100f24",
       fontSize: "0.9em",
+      color: hideColumns.length > 0 ? "#242235" : "grey",
     }),
   };
-
-  // transform the hideColumns array into an array of objects with label and value properties
-  const options = hideColumns.map((key) => ({ label: key, value: key }));
 
   return (
     <div className="hidden-columns-container">
@@ -97,8 +99,8 @@ function HiddenColumns({ hideShow, setHideShow, headers, headersFormatted }) {
         onChange={handleDropDownChange}
         placeholder="Hidden Columns"
         className="hidden-columns-select"
-        components={{ Option }} // use the custom Option component
-        styles={selectStyles} // apply the custom styles to the Select component
+        components={{ Option }}
+        styles={columnsDisplay}
       />
     </div>
   );

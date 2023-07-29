@@ -17,6 +17,7 @@ function TableFilter({
         headers={headers}
         headersFormatted={headersFormatted}
       />
+      <p className="table-title">2023 Book Log</p>
       <SearchBar books={books} setFilteredBooks={setFilteredBooks} />
     </div>
   );
