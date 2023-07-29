@@ -1,14 +1,33 @@
-npm install should install all dependancies
-npm install express
-npm install sqlite3
-install python
-npm install react-icons
-npm install react-select
+# Allie Soldau - HKW Dev Project
 
-node server.js to start up the server
-npm start to get the frontend running
+## Instructions for How to Run the Code
 
-http://localhost:3000/books
+1. Install all dependancies
+
+   - Run `npm install` in your terminal
+
+2. Double check you are running version 18.2.0 of React
+
+   - Run `npm view react version` in your terminal
+
+3. Run the local server
+
+   - Run `node server.js` in your terminal to run the server and connect to the sqlite3 database
+   - You can visit [http://localhost:3000/books](http://localhost:3000/books) to view the raw data
+
+4. Start the React file
+   - Open a web browser (preferably GoogleChrome or Safari)
+   - Run `npm start` in your terminal to launch the frontend
+   - This should automatically open a new tab in your browser window
+   - If you don't see it, try visiting [http://localhost:4000/](http://localhost:4000/) from your browser address bar
+
+## Database shooting
+
+- Reset the database
+  - Delete the `book_data.sqlite` file from the root directory
+  - Run `python3 create_database.py` in your terminal to reset the database
+  - Open the newly created `book_data.sqlite` file, click the refresh spiral arrow in the top left of the database screen, and click on the `books` table. This should display the books table with all cells filled out
+
 
 <!-- TO DO: make sure the site is all accessible!  -->
 
@@ -30,74 +49,3 @@ UI requirements:
 - A UI feature that allows the user to hide/show the table columns
 
 Feel free to include any other UI elements or interactions with this table that you would like, but the only items required for presentation are those above.
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
