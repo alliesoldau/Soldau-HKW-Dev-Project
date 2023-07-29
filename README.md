@@ -56,8 +56,8 @@ The backend was populated via a Python3 script. The database will come to you pr
 I chose to create a table displaying the books I've read thus far in 2023. When displayed on the frontend, the table format is as follows:
 
 **2023 Book Log**
-|Title|Author|Rating|Page Count|Genres|Date Completed|Publisher|Publisher Address|Purchase Link|
-|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
-|1|'Store 1'|1|'Store 1'|1|'Store 1'|1|'Store 1'|1|'Store 1'|1|'Store 1'|'Store 1'|
-|2|'Store 2'|1|'Store 1'|2|'Store 2'|1|'Store 1'|2|'Store 2'|1|'Store 1'|'Store 1'|
-|3|'Store 3'|1|'Store 1'|2|'Store 2'|1|'Store 1'|2|'Store 2'|1|'Store 1'|'Store 1'|
+| Title | Author | Rating | Page Count | Genres | Date Completed | Publisher | Publisher Address | Purchase Link |
+|:-----:|:------:|:------:|:----------:|:------:|:--------------:|:---------:|:-----------------:|:-------------:|
+| xxx | xxx | xxx | xxx | xxx | xxx | xxx | xxx(link) | -->(link) |
+| yyy | yyy | yyy | yyy | yyy | yyy | yyy | yyy(link) | -->(link) |
+| zzz | zzz | zzz | zzz | zzz | zzz | zzz | zzz(link) | -->(link) |
