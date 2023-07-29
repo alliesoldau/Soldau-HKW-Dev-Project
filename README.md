@@ -61,3 +61,42 @@ I chose to create a table displaying the books I've read thus far in 2023. When 
 | xxx | xxx | xxx | xxx | xxx | xxx | xxx | xxx(link) | -->(link) |
 | yyy | yyy | yyy | yyy | yyy | yyy | yyy | yyy(link) | -->(link) |
 | zzz | zzz | zzz | zzz | zzz | zzz | zzz | zzz(link) | -->(link) |
+
+## Project Features
+
+**Sorting**
+
+- Hovering over the column headers will reveal a sorting UI button next to the header title
+- You can toggle the sort between ascending and descending by clicking on the sort button
+- Columns where sorting doesn't make sense will not display a sorting icon
+
+**Searching**
+
+- You can search the table using the search bar on the top right of the screen
+- I limited the search area to title, author, publisher, and genres
+- The search feature is "live", so as you type it will filter the table
+
+**Hidding Columns**
+
+- Hovering over the column headers will reveal a hide UI button next to the header title
+- You can hide that column by clicking on the eyeball button
+- The column will immediately disappear from the table
+
+**Un-Hidding Columns**
+
+- To re-display a column that you've hidden, you can go to the Hidden Columns drop down in the top left hand side of the screen and select which column you want to add back into the table
+
+**External Links**
+
+- Clicking on an address in the Publisher Address column will take you to a new tab with a GoogleMaps display of the publisher's address
+- Clicking on the link icon in the Purchase Link column will take you to a new tab where you can purchase the book
+
+## Future Improvements
+
+**Mobile Formatting**
+
+- I opted to format this website to be suitable for laptops and monitors. It is not optimized for a mobile device. If this were a real-life project, I would add in conditional formmating for a mobile environment
+
+**Loading Screen**
+
+- If this were a real-life project I would ensure that a loading screen was present while the data was being fetched on the backend. Since this is being run locally and the site is so small, it never loads slowly enough for you to be able to see such a screen, so I omitted it from this project

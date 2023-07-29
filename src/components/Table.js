@@ -145,7 +145,8 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
                       </div>
                       {headers[index] === "publisher_address" ||
                       headers[index] === "genres" ||
-                      headers[index] === "url" ? null : (
+                      headers[index] === "url" ||
+                      headers[index] === "gmap_url" ? null : (
                         <div className="iconContainer">
                           <FaSort
                             className="arrows"
