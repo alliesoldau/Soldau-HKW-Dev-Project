@@ -11,8 +11,11 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
     let booksHeaders =
       filteredBooks.length > 0 ? Object.keys(filteredBooks[0]) : [];
     booksHeaders.shift();
+    booksHeaders.splice(8, 1);
+    booksHeaders.push("gmap_url");
     // get our raw headers
     setHeaders(booksHeaders);
+    console.log("booksHeaders", booksHeaders);
     // format the headers to look prettier
     let formatted = booksHeaders.map((str) =>
       capitalizeAllWords(str.replace(/_/g, " "))
@@ -20,6 +23,7 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
     formatted.splice(formatted.length - 2, 2);
     formatted.push("Purchase Link");
     setHeadersFormatted(formatted);
+    console.log("formattedHeaders", formatted);
   }, [filteredBooks]);
   // create a copy of books so that I can manipulate the order when I want to sort it by a specific column
   const [tableBooks, setTableBooks] = useState([...filteredBooks]);
