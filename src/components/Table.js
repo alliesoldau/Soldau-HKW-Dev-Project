@@ -9,8 +9,6 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
     let booksHeaders =
       filteredBooks.length > 0 ? Object.keys(filteredBooks[0]) : [];
     booksHeaders.shift();
-    // booksHeaders.splice(8, 1);
-    // booksHeaders.push("gmap_url");
     // get our raw headers
     setHeaders(booksHeaders);
     // format the headers to look prettier
@@ -106,7 +104,6 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
       ...hideShow,
       [selectedHeader]: currentClassName,
     };
-    console.log("updatedHideShow", updatedHideShow);
     setHideShow(updatedHideShow);
   }
 
@@ -131,6 +128,8 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
                     key={headers[index]}
                     value={headers[index]}
                     className={
+                      // I decided to add in the gmap url later on in the process and so this is a patch to allow me to continue to hideShow
+                      // based on the header with this extra data in the object
                       index === 8 ? hideShow["url"] : hideShow[headers[index]]
                     }
                   >
@@ -139,6 +138,8 @@ function Table({ filteredBooks, setFilteredBooks, books }) {
                         <FaRegEyeSlash
                           className="eyeball"
                           onClick={() => {
+                            // I decided to add in the gmap url later on in the process and so this is a patch to allow me to continue to hideShow
+                            // based on the header with this extra data in the object
                             let hideMe = headers[index];
                             if (hideMe === "gmap_url") {
                               hideMe = "url";

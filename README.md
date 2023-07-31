@@ -110,3 +110,7 @@ I chose to create a table displaying the books I've read thus far in 2023. When 
 **Loading Screen**
 
 - If this were a real-life project I would ensure that a loading screen was present while the data was being fetched on the backend. Since this is being run locally and the site is so small, it never loads slowly enough for you to be able to see such a screen, so I omitted it from this project
+
+**Hidden Columns While Searching**
+
+- To allow users to see all searchable data, I opted to unhide all columns while the user is using the search bar. I chose this so that it is clear why specific books are being displayed. It's possible that the client may prefer to keep the hidden columns hidden while a user searches, and potentially limit the search to the visible columns
