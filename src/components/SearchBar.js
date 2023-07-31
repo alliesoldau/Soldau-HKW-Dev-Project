@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { FaMagnifyingGlass } from "react-icons/fa";
 
 function SearchBar({ books, setFilteredBooks }) {
-  // set Up state variables
+  // set up state variables
   const [searchQuery, setSearchQuery] = useState("");
 
   // handle search input
